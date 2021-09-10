@@ -6,7 +6,6 @@
       <%- include('../../partials/sidebar.ejs')%>
 
       <!-- Content Wrapper -->
-
       <div id="content-wrapper" class="d-flex flex-column">
         <!-- Main Content -->
         <div id="content">
@@ -15,12 +14,13 @@
           <!-- End of Topbar -->
 
           <!-- Begin Page Content -->
+          <!-- Page Heading -->
           <div class="container-fluid">
             <!-- Page Heading -->
-            <h1 class="h3 mb-4 text-gray-800">Position Page</h1>
+            <%- include('./tablePosition.ejs')%>
           </div>
-          <!-- /.container-fluid -->
         </div>
+        <!-- /.container-fluid -->
         <!-- End of Main Content -->
         <!-- Footer -->
         <%- include('../../partials/footer.ejs')%>
