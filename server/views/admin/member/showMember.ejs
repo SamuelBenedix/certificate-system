@@ -29,8 +29,28 @@
 
       <!-- End of Content Wrapper -->
     </div>
-    <%- include('../../partials/scrollToTop.ejs')%> <%-
+
+    <%- include('./modalMember.ejs')%> <%-
+    include('../../partials/scrollToTop.ejs')%> <%-
     include('../../partials/logoutModal.ejs')%> <%-
     include('../../partials/script.ejs')%>
+
+    <script type="text/javascript">
+      $(function () {
+        $("body").on("click", ".btn-edit", function () {
+          $(".modal-title").html("Update Anggota");
+          const _id = $(this).data("id");
+
+          $.ajax({
+            url: `/admin/member/getMember`,
+            method: "POST",
+            data: { _id },
+            success: function (data) {
+              console.log(data);
+            },
+          });
+        });
+      });
+    </script>
   </body>
 </html>

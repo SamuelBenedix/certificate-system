@@ -6,7 +6,10 @@ const logger = require("morgan");
 
 //import mongoose
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/myapp");
+mongoose.connect("mongodb://localhost:27017/certificate", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const indexRouter = require("./routes/index");
 const adminRouter = require("./routes/admin");
